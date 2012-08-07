@@ -1,0 +1,25 @@
+[user]
+	name = George Lee
+	email = mclee@foolme.net
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	log = auto
+	interactive = auto
+
+[alias]
+	st = status
+	stat = status
+	ci = commit
+	br = branch
+	co = checkout
+[core]
+	excludesfile = /Users/mclee/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

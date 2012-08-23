@@ -50,6 +50,7 @@ export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export EDITOR="/usr/local/bin/vim"
+export ACK_PAGER="less -r"
 
 # homebrew byobu
 export BYOBU_PREFIX=$(brew --prefix)

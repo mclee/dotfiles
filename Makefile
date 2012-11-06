@@ -1,18 +1,18 @@
 install: install-zsh install-git install-gem install-livereload install-rvm
 
 install-zsh:
-	ln -s `pwd`/zshrc ~/.zshrc
+	ln -sf `pwd`/zshrc ~/.zshrc
 
 install-git:
-	ln -s `pwd`/gitconfig ~/.gitconfig
-	ln -s `pwd`/gitignore_global ~/.gitignore_global
+	ln -sf `pwd`/gitconfig ~/.gitconfig
+	ln -sf `pwd`/gitignore_global ~/.gitignore_global
 
 install-gem:
-	ln -s `pwd`/gemrc ~/.gemrc
+	ln -sf `pwd`/gemrc ~/.gemrc
 
 install-livereload:
-	ln -s `pwd`/livereload ~/.livereload
+	ln -sf `pwd`/livereload ~/.livereload
 
 install-rvm:
-	ln -s `pwd`/rvmrc ~/.rvmrc
-	ln -s `pwd`/screenrc ~/.screenrc
+	ln -sf `pwd`/rvmrc ~/.rvmrc
+	ln -sf `pwd`/screenrc ~/.screenrc

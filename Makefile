@@ -1,4 +1,4 @@
-install: install-zsh install-git install-gem install-livereload install-rvm
+install: install-zsh install-git install-gem install-livereload install-rvm install-ssh
 
 install-zsh:
 	ln -sf `pwd`/zshrc ~/.zshrc
@@ -16,3 +16,7 @@ install-livereload:
 install-rvm:
 	ln -sf `pwd`/rvmrc ~/.rvmrc
 	ln -sf `pwd`/screenrc ~/.screenrc
+
+install-ssh:
+	mkdir -p ~/.ssh
+	ln -sf `pwd`/ssh_config ~/.ssh/config

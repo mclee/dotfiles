@@ -1,0 +1,2 @@
+Host *.recordcup.com *.jikelai.me *.jiluguan.com
+	ForwardAgent yes

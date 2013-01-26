@@ -2,6 +2,7 @@ install: install-zsh install-git install-gem install-livereload install-rvm inst
 
 install-zsh:
 	ln -sf `pwd`/zshrc ~/.zshrc
+	ln -sf `pwd`/zlogin ~/.zlogin
 
 install-git:
 	ln -sf `pwd`/gitconfig ~/.gitconfig

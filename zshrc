@@ -34,7 +34,7 @@ plugins=(git brew cake osx rails3 ruby)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/local/Cellar/ruby/1.9.3-p194/bin:/usr/bin:/usr/local/sbin:$HOME/bin
+export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/local/Cellar/ruby/1.9.3-head/bin:/usr/bin:/usr/local/sbin:$HOME/bin
 export BYOBU_PREFIX=`brew --prefix`
 alias vi="vim"
 alias edit="vim"

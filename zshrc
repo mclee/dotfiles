@@ -29,7 +29,7 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew cake osx rails3 ruby)
+plugins=(git brew bundle cap osx rails3 redis-cli vundle)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -58,5 +58,6 @@ export BYOBU_PREFIX=$(brew --prefix)
 # A righteous umask
 umask 22
 
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" ]]
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"

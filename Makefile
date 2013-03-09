@@ -1,4 +1,4 @@
-install: install-zsh install-git install-gem install-livereload install-rvm install-ssh
+install: install-zsh install-git install-gem install-livereload install-ssh install-rbenv
 
 install-zsh:
 	ln -sf `pwd`/zshrc ~/.zshrc
@@ -21,3 +21,9 @@ install-rvm:
 install-ssh:
 	mkdir -p ~/.ssh
 	ln -sf `pwd`/ssh_config ~/.ssh/config
+
+install-rbenv:
+	git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+	git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+	git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
+	ln -sf default-gems ~/.rbenv/.

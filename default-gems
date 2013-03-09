@@ -1,0 +1,11 @@
+bundler
+rails
+compass
+devise
+guard
+guard-livereload
+capistrano
+mechanize
+mysql2
+quiet_assets
+mini_magick

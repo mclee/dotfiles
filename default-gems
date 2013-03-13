@@ -9,3 +9,4 @@ mechanize
 mysql2
 quiet_assets
 mini_magick
+passenger

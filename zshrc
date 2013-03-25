@@ -29,12 +29,12 @@ CASE_SENSITIVE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew bundle cap osx rails3 redis-cli vundle)
+plugins=(git brew bundle cap coffee osx rails3 redis-cli vundle)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/local/Cellar/ruby/1.9.3-head/bin:/usr/bin:/usr/local/sbin:$HOME/bin
+export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:/usr/local/share/npm/bin
 export BYOBU_PREFIX=`brew --prefix`
 alias vi="vim"
 alias edit="vim"

@@ -61,3 +61,10 @@ umask 22
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# rbenvsudo
+function rbenvsudo(){
+	executable=$1
+	shift 1
+	sudo $(rbenv which $executable) $* 
+}

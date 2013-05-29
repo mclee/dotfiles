@@ -1,4 +1,4 @@
-install: install-zsh install-git install-gem install-livereload install-ssh install-rbenv
+install: install-zsh install-git install-gem install-livereload install-ssh install-rbenv install-ackrc
 
 install-zsh:
 	ln -sf `pwd`/zshrc ~/.zshrc
@@ -27,3 +27,6 @@ install-rbenv:
 	git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 	git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
 	ln -sf default-gems ~/.rbenv/.
+
+install-ackrc:
+	ln -sf `pwd`/ackrc ~/.ackrc

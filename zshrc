@@ -35,7 +35,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:/usr/local/share/npm/bin
-export BYOBU_PREFIX=`brew --prefix`
 alias vi="vim"
 alias edit="vim"
 alias sync="/bin/sync;/bin/sync;/bin/sync"

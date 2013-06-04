@@ -1,8 +1,10 @@
 install: install-zsh install-git install-gem install-livereload install-ssh install-rbenv install-ackrc
 
 install-zsh:
+	curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 	ln -sf `pwd`/zshrc ~/.zshrc
 	ln -sf `pwd`/zlogin ~/.zlogin
+	ln -sf `pwd`/mclee.zsh-theme ~/.oh-my-zsh/themes/mclee.zsh-theme
 
 install-git:
 	ln -sf `pwd`/gitconfig ~/.gitconfig

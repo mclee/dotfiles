@@ -37,6 +37,7 @@ ln -sf $DEST/ssh_config ~/.ssh/config
 
 # install-rbenv
 if [ $MACHINE != "Darwin" ]; then
+	sudo apt-get install libssl-dev
 	git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 	git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 fi

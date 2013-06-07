@@ -1,11 +1,17 @@
 #!/bin/sh
 
 DEST="~/dotfiles"
+MACHINE=`uname`
+
 git clone https://github.com/mclee/dotfiles.git $DEST
 
 # install-zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-ln -sf $DEST/zshrc ~/.zshrc
+if [ $MACHINE = "Darwin" ]; then
+	ln -sf $DEST/zshrc ~/.zshrc
+else
+	ln -sf $DEST/zshrc.general ~/.zshrc
+fi
 ln -sf $DEST/zlogin ~/.zlogin
 ln -sf $DEST/mclee.zsh-theme ~/.oh-my-zsh/themes/mclee.zsh-theme
 
@@ -30,8 +36,10 @@ mkdir -p ~/.ssh
 ln -sf $DEST/ssh_config ~/.ssh/config
 
 # install-rbenv
-git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+if [ $MACHINE != "Darwin" ]; then
+	git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+	git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+fi
 git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
 ln -sf $DEST/default-gems ~/.rbenv/.
 

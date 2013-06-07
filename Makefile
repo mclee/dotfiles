@@ -28,7 +28,7 @@ install-rbenv:
 	git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 	git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 	git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
-	ln -sf default-gems ~/.rbenv/.
+	ln -sf `pwd`/default-gems ~/.rbenv/.
 
 install-ackrc:
 	ln -sf `pwd`/ackrc ~/.ackrc

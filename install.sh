@@ -45,6 +45,7 @@ if [ $MACHINE != "Darwin" ]; then
 	git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
 	git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
+git clone git://github.com/tpope/rbenv-communal-gems.git ~/.rbenv/plugins/rbenv-communal-gems
 ln -sf $DEST/default-gems ~/.rbenv/.
 
 # install-ackrc

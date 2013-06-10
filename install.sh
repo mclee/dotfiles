@@ -41,8 +41,9 @@ if [ $MACHINE != "Darwin" ]; then
 	git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 	git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 	git clone git://github.com/carsomyr/rbenv-bundler.git ~/.rbenv/plugins/bundler
+	git clone git://github.com/tpope/rbenv-aliases.git ~/.rbenv/plugins/rbenv-aliases
+	git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
 fi
-git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
 ln -sf $DEST/default-gems ~/.rbenv/.
 
 # install-ackrc

@@ -43,6 +43,7 @@ if [ $MACHINE != "Darwin" ]; then
 	git clone git://github.com/carsomyr/rbenv-bundler.git ~/.rbenv/plugins/bundler
 	git clone git://github.com/tpope/rbenv-aliases.git ~/.rbenv/plugins/rbenv-aliases
 	git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
+	git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
 ln -sf $DEST/default-gems ~/.rbenv/.
 

@@ -1,2 +1,17 @@
 --color
 --pager=less -r
+
+# follow symlinks
+--follow
+
+# search other filetypes
+--type-add
+ruby=haml,rabl,builder
+
+--type-add
+js=json,tmpl,jst
+
+--type-add
+css=sass,scss
+
+--type-set=markdown=.markdown,.md,.mdown

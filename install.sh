@@ -21,6 +21,9 @@ if [ ! -d ~/.byobu ]; then
 fi
 ln -sf $DEST/profile.tmux ~/.byobu/profile.tmux
 
+# install tmux-powerline
+git clone git://github.com/erikw/tmux-powerline.git ~/tmux-powerline
+
 # install-git
 ln -sf $DEST/gitconfig ~/.gitconfig
 ln -sf $DEST/gitignore_global ~/.gitignore_global

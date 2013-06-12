@@ -7,10 +7,9 @@ git clone https://github.com/mclee/dotfiles.git $DEST
 
 # install-zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
-if [ $MACHINE = "Darwin" ]; then
-	ln -sf $DEST/zshrc ~/.zshrc
-else
-	ln -sf $DEST/zshrc.general ~/.zshrc
+ln -sf $DEST/zshrc ~/.zshrc
+if [ ! $MACHINE = "Linux" ]; then
+	ln -sf $DEST/zshrc.general ~/.zshrc.general
 fi
 ln -sf $DEST/zlogin ~/.zlogin
 ln -sf $DEST/mclee.zsh-theme ~/.oh-my-zsh/themes/mclee.zsh-theme

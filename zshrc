@@ -31,6 +31,8 @@ CASE_SENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git brew bundle cap coffee osx rails3 redis-cli vundle)
 
+MACHINE=`uname`
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -51,8 +53,10 @@ export LC_ALL="en_US.UTF-8"
 export EDITOR="vim"
 export ACK_PAGER="less -r"
 
-# homebrew byobu
-export BYOBU_PREFIX=$(brew --prefix)
+# homebrew byobu, only for OSX
+if [ $MACHINE = "Darwin" ]; then
+	export BYOBU_PREFIX=$(brew --prefix)
+fi
 
 # A righteous umask
 umask 22
@@ -67,3 +71,9 @@ function rbenvsudo(){
 	shift 1
 	sudo $(rbenv which $executable) $* 
 }
+
+# Below are some Linux stuff
+#
+if [ $MACHINE = "Linux" ]; then
+	source ~/.zshrc.linux
+fi

@@ -1,0 +1,8 @@
+# search string in git history
+alias gitsearch='git rev-list --all | xargs git grep -F'
+
+# search history
+alias historysearch='history | grep --color=auto'
+
+# show network LISTEN state
+alias netlisten='lsof -i -P | grep LISTEN'

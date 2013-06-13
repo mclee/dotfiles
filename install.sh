@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DEST="~/dotfiles"
+DEST="$HOME/dotfiles"
 MACHINE=`uname`
 
 if [ ! -d $DEST ]; then
@@ -47,14 +47,14 @@ ln -sf $DEST/ssh_config ~/.ssh/config
 # install-rbenv
 if [ $MACHINE != "Darwin" ]; then
 	sudo apt-get install libssl-dev
-	git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-	git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-	git clone git://github.com/carsomyr/rbenv-bundler.git ~/.rbenv/plugins/bundler
-	git clone git://github.com/tpope/rbenv-aliases.git ~/.rbenv/plugins/rbenv-aliases
-	git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
-	git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+	[ ! -d ~/.rbenv ] && git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+	[ ! -d ~/.rbenv/plugins/bundler ] && git clone git://github.com/carsomyr/rbenv-bundler.git ~/.rbenv/plugins/bundler
+	[ ! -d ~/.rbenv/plugins/rbenv-aliases ] && git clone git://github.com/tpope/rbenv-aliases.git ~/.rbenv/plugins/rbenv-aliases
+	[ ! -d ~/.rbenv/plugins/rbenv-default-gems ] && git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
+	[ ! -d ~/.rbenv/plugins/rbenv-gem-rehash ] && git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
-git clone git://github.com/tpope/rbenv-communal-gems.git ~/.rbenv/plugins/rbenv-communal-gems
+[ ! -d ~/.rbenv/plugins/rbenv-communal-gems ] && git clone git://github.com/tpope/rbenv-communal-gems.git ~/.rbenv/plugins/rbenv-communal-gems
 ln -sf $DEST/default-gems ~/.rbenv/.
 
 # install-ackrc

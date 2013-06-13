@@ -73,10 +73,12 @@ function rbenvsudo(){
 }
 
 # Other includes
-source ~/.zshrc.general
+if [ -f ~/.zshrc.general ]; then
+	source ~/.zshrc.general
+fi
 
 # Below are some Linux stuff
 #
-if [ $MACHINE = "Linux" && -f ~/.zshrc.linux ]; then
+if [ $MACHINE = "Linux" ] && [ -f ~/.zshrc.linux ]; then
 	source ~/.zshrc.linux
 fi

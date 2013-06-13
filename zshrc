@@ -72,8 +72,11 @@ function rbenvsudo(){
 	sudo $(rbenv which $executable) $* 
 }
 
+# Other includes
+source ~/.zshrc.general
+
 # Below are some Linux stuff
 #
-if [ $MACHINE = "Linux" ]; then
+if [ $MACHINE = "Linux" && -f ~/.zshrc.linux ]; then
 	source ~/.zshrc.linux
 fi

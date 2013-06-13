@@ -8,8 +8,9 @@ git clone https://github.com/mclee/dotfiles.git $DEST
 # install-zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ln -sf $DEST/zshrc ~/.zshrc
+ln -sf $DEST/zshrc.general ~/.zshrc.general
 if [ ! $MACHINE = "Linux" ]; then
-	ln -sf $DEST/zshrc.general ~/.zshrc.general
+	ln -sf $DEST/zshrc.linux ~/.zshrc.linux
 fi
 ln -sf $DEST/zlogin ~/.zlogin
 ln -sf $DEST/mclee.zsh-theme ~/.oh-my-zsh/themes/mclee.zsh-theme

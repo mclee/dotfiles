@@ -3,10 +3,14 @@
 DEST="~/dotfiles"
 MACHINE=`uname`
 
-git clone https://github.com/mclee/dotfiles.git $DEST
+if [ ! -d $DEST ]; then
+	git clone https://github.com/mclee/dotfiles.git $DEST
+fi
 
 # install-zsh
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+if [ ! -d ~/.oh-my-zsh ]; then
+	curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+fi
 ln -sf $DEST/zshrc ~/.zshrc
 ln -sf $DEST/zshrc.general ~/.zshrc.general
 if [ ! $MACHINE = "Linux" ]; then
@@ -22,7 +26,9 @@ fi
 ln -sf $DEST/profile.tmux ~/.byobu/profile.tmux
 
 # install tmux-powerline
-git clone git://github.com/erikw/tmux-powerline.git ~/tmux-powerline
+if [ ! -d ~/tmux-powerline ]; then
+	git clone git://github.com/erikw/tmux-powerline.git ~/tmux-powerline
+fi
 
 # install-git
 ln -sf $DEST/gitconfig ~/.gitconfig

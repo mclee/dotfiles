@@ -13,7 +13,7 @@ if [ ! -d ~/.oh-my-zsh ]; then
 fi
 ln -sf $DEST/zshrc ~/.zshrc
 ln -sf $DEST/zshrc.general ~/.zshrc.general
-if [ ! $MACHINE = "Linux" ]; then
+if [ $MACHINE = "Linux" ]; then
 	ln -sf $DEST/zshrc.linux ~/.zshrc.linux
 fi
 ln -sf $DEST/zlogin ~/.zlogin

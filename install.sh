@@ -59,3 +59,7 @@ ln -sf $DEST/default-gems ~/.rbenv/.
 
 # install-ackrc
 ln -sf $DEST/ackrc ~/.ackrc
+
+# install runnel setup file
+[ ! -d ~/.runnel ] && mkdir -p ~/.runnel
+ln -sf $DEST/tunnel.yml ~/.runnel/tunnel.yml

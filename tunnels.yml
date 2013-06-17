@@ -1,0 +1,9 @@
+---
+:s1:
+  :name: s1 tunnel
+  :mport: 20123 #The autossh monitor port
+  :command: -CfqnNT -D 40180 -L 3128:proxy.seed.net.tw:8080 tunnel@s1.recordcup.com
+:s2:
+  :name: s2 tunnel
+  :mport: 20223 #The autossh monitor port
+  :command: -CfqnNT -D 40180 -L 3128:proxy.seed.net.tw:8080 tunnel@s2.recordcup.com

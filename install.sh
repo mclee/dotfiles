@@ -55,6 +55,7 @@ if [ $MACHINE != "Darwin" ]; then
 	[ ! -d ~/.rbenv/plugins/rbenv-gem-rehash ] && git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
 [ ! -d ~/.rbenv/plugins/rbenv-communal-gems ] && git clone git://github.com/tpope/rbenv-communal-gems.git ~/.rbenv/plugins/rbenv-communal-gems
+[ ! -d ~/.rbenv/plugins/rbenv-sudo ] && git clone git://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
 ln -sf $DEST/default-gems ~/.rbenv/.
 
 # install-ackrc

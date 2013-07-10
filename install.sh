@@ -64,10 +64,4 @@ ln -sf $DEST/ackrc ~/.ackrc
 
 # install runnel setup file
 [ ! -d ~/.runnel ] && mkdir -p ~/.runnel
-ln -sf $DEST/tunnel.yml ~/.runnel/tunnel.yml
-
-# make git template dir
-# taken from http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
-if [ ! -d ~/.git_template ]; then
-	ln -sf $DEST/.git_template ~/.git_template
-fi
+ln -sf $DEST/tunnels.yml ~/.runnel/tunnels.yml

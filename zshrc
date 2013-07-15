@@ -55,9 +55,11 @@ export LC_ALL="en_US.UTF-8"
 export EDITOR="vim"
 export ACK_PAGER="less -r"
 
-# homebrew byobu, only for OSX
 if [ $MACHINE = "Darwin" ]; then
+	# homebrew byobu, only for OSX
 	export BYOBU_PREFIX=$(brew --prefix)
+	# autojump.sh
+	[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 fi
 
 # A righteous umask

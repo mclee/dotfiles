@@ -60,6 +60,9 @@ if [ $MACHINE = "Darwin" ]; then
 	export BYOBU_PREFIX=$(brew --prefix)
 	# autojump.sh
 	[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+	# homebrew android-sdk
+	ANDROID_HOME=/usr/local/opt/android-sdk
 fi
 
 # A righteous umask

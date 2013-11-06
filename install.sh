@@ -48,7 +48,7 @@ ln -sf $DEST/ssh_config ~/.ssh/config
 if [ $MACHINE != "Darwin" ]; then
 
 	# setup default packages first
-	sudo apt-get -y install libssl-dev build-essential ctags libreadline-dev imagemagick nodejs libmysqlclient-dev byobu
+	sudo apt-get -y install libssl-dev build-essential ctags libreadline-dev imagemagick nodejs libmysqlclient-dev byobu libpcre++-dev
 
 	[ ! -d ~/.rbenv ] && git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build

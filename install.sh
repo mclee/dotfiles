@@ -20,10 +20,12 @@ ln -sf $DEST/zlogin ~/.zlogin
 ln -sf $DEST/mclee.zsh-theme ~/.oh-my-zsh/themes/mclee.zsh-theme
 
 # install-byobu
-if [ ! -d ~/.byobu ]; then
-	mkdir ~/.byobu
+if [ $MACHINE == "DARWIN" ]; then
+	if [ ! -d ~/.byobu ]; then
+		mkdir ~/.byobu
+	fi
+	ln -sf $DEST/profile.tmux ~/.byobu/profile.tmux
 fi
-ln -sf $DEST/profile.tmux ~/.byobu/profile.tmux
 
 # install tmux-powerline
 if [ ! -d ~/tmux-powerline ]; then

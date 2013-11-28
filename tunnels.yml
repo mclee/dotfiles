@@ -1,9 +1,9 @@
 ---
-:s1:
-  :name: s1 tunnel
+:o1:
+  :name: o1 tunnel
   :mport: 20123 #The autossh monitor port
-  :command: -CfqnNT -D 40180 -L 3128:proxy.seed.net.tw:8080 tunnel@s1.recordcup.com
-:s2:
-  :name: s2 tunnel
-  :mport: 20223 #The autossh monitor port
-  :command: -CfqnNT -D 40180 -L 3128:proxy.seed.net.tw:8080 tunnel@s2.recordcup.com
+  :command: -CfqnNT -D 40180 tunnel@o1.recordcup.com
+:hiwifi:
+  :name: hiwifi tunnel
+  :mport: 20223
+  :command: -CfqnNT -D 40180 hiwifi@162.243.66.118

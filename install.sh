@@ -63,6 +63,7 @@ fi
 [ ! -d ~/.rbenv/plugins/rbenv-communal-gems ] && git clone git://github.com/tpope/rbenv-communal-gems.git ~/.rbenv/plugins/rbenv-communal-gems
 [ ! -d ~/.rbenv/plugins/rbenv-sudo ] && git clone git://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
 [ ! -d ~/.rbenv/plugins/rbenv-ctags ] && git clone git://github.com/tpope/rbenv-ctags.git ~/.rbenv/plugins/rbenv-ctags
+[ ! -d ~/.rbenv/plugins/rbenv-update ] && git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
 ln -sf $DEST/default-gems ~/.rbenv/.
 
 # install-ackrc

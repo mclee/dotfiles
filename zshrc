@@ -30,7 +30,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git brew bundler cap coffee osx rails4 redis-cli vundle)
-plugins=(git brew rails4 vundle)
+plugins=(git brew rails vundle)
 
 MACHINE=`uname`
 

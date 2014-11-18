@@ -3,6 +3,11 @@
 DEST="$HOME/dotfiles"
 MACHINE=`uname`
 
+if [ $MACHINE != "Darwin" ]; then
+	# setup git & zsh first
+	sudo apt-get -y install zsh git
+fi
+
 if [ ! -d $DEST ]; then
 	git clone https://github.com/mclee/dotfiles.git $DEST
 fi

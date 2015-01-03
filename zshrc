@@ -58,8 +58,6 @@ export ACK_PAGER="less -r"
 if [ $MACHINE = "Darwin" ]; then
 	# homebrew byobu, only for OSX
 	export BYOBU_PREFIX=$(brew --prefix)
-	# autojump.sh
-	[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 	# homebrew android-sdk
 	ANDROID_HOME=/usr/local/opt/android-sdk

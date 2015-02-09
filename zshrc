@@ -37,7 +37,7 @@ MACHINE=`uname`
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:/usr/local/share/npm/bin
+export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:/usr/local/share/npm/bin:$HOME/gocode/bin
 alias vi="vim"
 alias edit="vim"
 alias sync="/bin/sync;/bin/sync;/bin/sync"
@@ -54,6 +54,7 @@ export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 export EDITOR="vim"
 export ACK_PAGER="less -r"
+export GOPATH="$HOME/gocode"
 
 if [ $MACHINE = "Darwin" ]; then
 	# homebrew byobu, only for OSX

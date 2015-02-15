@@ -3,7 +3,15 @@
   :name: o1 tunnel
   :mport: 20123 #The autossh monitor port
   :command: -CfqnNT -D 40180 tunnel@o1.recordcup.com
-:hiwifi:
-  :name: hiwifi tunnel
-  :mport: 20223
-  :command: -CfqnNT -D 40180 hiwifi@162.243.66.118
+:o2:
+  :name: o2 tunnel
+  :mport: 20123 #The autossh monitor port
+  :command: -CfqnNT -D 40180 tunnel@o2.recordcup.com
+:o3:
+  :name: o3 tunnel
+  :mport: 20123 #The autossh monitor port
+  :command: -CfqnNT -D 40180 tunnel@o3.recordcup.com
+:dog:
+  :name: dog tunnel
+  :mport: 20123 #The autossh monitor port
+  :command: -CfqnNT -D 40180 dog.foolme.net

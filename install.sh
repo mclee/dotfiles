@@ -56,7 +56,7 @@ if [ $MACHINE != "Darwin" ]; then
 
 	# setup default packages first
 	sudo apt-get -y install libssl-dev build-essential exuberant-ctags libreadline-dev imagemagick \
-		libmysqlclient-dev byobu libpcre++-dev libxml2-dev libxslt1-dev
+		libmysqlclient-dev byobu libpcre++-dev libxml2-dev libxslt1-dev htop
 
 	[ ! -d ~/.rbenv ] && git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build

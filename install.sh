@@ -58,6 +58,11 @@ if [ $MACHINE != "Darwin" ]; then
 	sudo apt-get -y install libssl-dev build-essential exuberant-ctags libreadline-dev imagemagick \
 		libmysqlclient-dev byobu libpcre++-dev libxml2-dev libxslt1-dev htop
 
+	# install tsar
+	git clone https://github.com/alibaba/tsar.git ~/tsar
+	cd ~/tsar; make; sudo make install;
+	cd ~;
+
 	[ ! -d ~/.rbenv ] && git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 	[ ! -d ~/.rbenv/plugins/bundler ] && git clone git://github.com/carsomyr/rbenv-bundler.git ~/.rbenv/plugins/bundler

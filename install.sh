@@ -25,7 +25,7 @@ ln -sf $DEST/zlogin ~/.zlogin
 ln -sf $DEST/mclee.zsh-theme ~/.oh-my-zsh/themes/mclee.zsh-theme
 
 # install-byobu
-if [ $MACHINE == "DARWIN" ]; then
+if [ $MACHINE = "DARWIN" ]; then
 	if [ ! -d ~/.byobu ]; then
 		mkdir ~/.byobu
 	fi
@@ -55,8 +55,13 @@ ln -sf $DEST/ssh_config ~/.ssh/config
 if [ $MACHINE != "Darwin" ]; then
 
 	# setup default packages first
-	sudo apt-get -y install libssl-dev build-essential ctags libreadline-dev imagemagick \
-		nodejs libmysqlclient-dev byobu libpcre++-dev libxml2-dev libxslt1-dev
+	sudo apt-get -y install libssl-dev build-essential exuberant-ctags libreadline-dev imagemagick \
+		libmysqlclient-dev byobu libpcre++-dev libxml2-dev libxslt1-dev htop
+
+	# install tsar
+	git clone https://github.com/alibaba/tsar.git ~/tsar
+	cd ~/tsar; make; sudo make install;
+	cd ~;
 
 	[ ! -d ~/.rbenv ] && git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
 	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build

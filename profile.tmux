@@ -11,3 +11,4 @@ set-option -g status-utf8 on
 #set-option -g status-right-length 90
 #set-option -g status-left "#(~/tmux-powerline/powerline.sh left)"
 #set-option -g status-right "#(~/tmux-powerline/powerline.sh right)"
+set-window-option -g alternate-screen off

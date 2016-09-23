@@ -37,7 +37,7 @@ MACHINE=`uname`
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:/usr/local/share/npm/bin:$HOME/gocode/bin
+export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:/usr/local/share/npm/bin:$HOME/gocode/bin:/usr/local/opt/go/libexec/bin
 alias vi="vim"
 alias edit="vim"
 alias sync="/bin/sync;/bin/sync;/bin/sync"

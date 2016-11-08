@@ -1,2 +1,3 @@
 Host *.recordcup.com *.jikelai.me *.jiluguan.com *.mj-networks.com *.foolme.net
+	User mclee
 	ForwardAgent yes

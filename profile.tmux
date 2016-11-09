@@ -5,7 +5,6 @@ set -g status-bg '#666666'
 set -g status-fg '#EEEEEE'
 
 set-option -g status on
-set-option -g status-utf8 on
 #set-option -g status-justify "centre"
 #set-option -g status-left-length 60
 #set-option -g status-right-length 90

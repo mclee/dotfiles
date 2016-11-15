@@ -55,6 +55,7 @@ ln -sf $DEST/ssh_config ~/.ssh/config
 if [ $MACHINE != "Darwin" ]; then
 
 	# setup default packages first
+	sudo apt-get update
 	sudo apt-get -y install libssl-dev build-essential exuberant-ctags libreadline-dev imagemagick \
 		libmysqlclient-dev byobu libpcre++-dev libxml2-dev libxslt1-dev htop
 

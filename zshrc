@@ -87,4 +87,7 @@ fi
 #
 if [ $MACHINE = "Linux" ] && [ -f ~/.zshrc.linux ]; then
 	source ~/.zshrc.linux
+else
+	ssh-add ~/.ssh/bk_id_rsa
+	ssh-add ~/.ssh/id_rsa
 fi

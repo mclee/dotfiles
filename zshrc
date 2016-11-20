@@ -47,6 +47,7 @@ alias gindent="/usr/local/bin/gindent $1 $2 -i2 -bl -nce -bacc -nlp -di0"
 alias indent="/usr/bin/indent $1 $2 -bbb -bap -lp -sob -nip -di2"
 alias top="htop"
 alias ls="ls -G"
+alias ag="ag --pager=less"
 
 export ENABLE_STARTUP_LOCALE="en_US.UTF-8"
 export LANG="en_US.UTF-8"

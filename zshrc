@@ -95,3 +95,12 @@ fi
 
 export NVM_DIR="/Users/glee/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# pyenv stuff
+if [ $MACHINE = "Darwin" ]; then
+	export PYENV_ROOT=/usr/local/var/pyenv
+else
+	export PYENV_ROOT="$HOME/.pyenv"
+fi
+export PATH="$HOME/.pyenv/shims:$PATH"
+if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi

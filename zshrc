@@ -93,7 +93,7 @@ else
 	ssh-add ~/.ssh/id_rsa
 fi
 
-export NVM_DIR="/Users/glee/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # pyenv stuff

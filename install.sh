@@ -82,3 +82,9 @@ ln -sf $DEST/ackrc ~/.ackrc
 # install runnel setup file
 [ ! -d ~/.runnel ] && mkdir -p ~/.runnel
 ln -sf $DEST/tunnels.yml ~/.runnel/tunnels.yml
+
+# install pyenv & nvm
+if [ $MACHINE != "Darwin" ]; then
+	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash #nvm
+	git clone https://github.com/yyuu/pyenv.git ~/.pyenv #pyenv
+fi

@@ -89,8 +89,10 @@ fi
 if [ $MACHINE = "Linux" ] && [ -f ~/.zshrc.linux ]; then
 	source ~/.zshrc.linux
 else
-	ssh-add ~/.ssh/id_ed25519
-	ssh-add ~/.ssh/id_rsa
+	if ! [ -n "$TMUX" ]; then
+		ssh-add ~/.ssh/id_ed25519
+		ssh-add ~/.ssh/id_rsa
+	fi
 fi
 
 export NVM_DIR="$HOME/.nvm"

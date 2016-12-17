@@ -89,7 +89,7 @@ fi
 if [ $MACHINE = "Linux" ] && [ -f ~/.zshrc.linux ]; then
 	source ~/.zshrc.linux
 else
-	if ! [ -n "$TMUX" ]; then
+	if ! env |grep -q ^TMUX=; then
 		ssh-add ~/.ssh/id_ed25519
 		ssh-add ~/.ssh/id_rsa
 	fi

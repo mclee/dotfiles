@@ -30,6 +30,7 @@ if [ $MACHINE = "DARWIN" ]; then
 		mkdir ~/.byobu
 	fi
 	ln -sf $DEST/profile.tmux ~/.byobu/profile.tmux
+	ln -sf $DEST/.tmux.conf ~/.byobu/.tmux.conf
 fi
 
 # install tmux-powerline

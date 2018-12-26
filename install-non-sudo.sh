@@ -62,6 +62,10 @@ fi
 [ ! -d ~/.rbenv/plugins/rbenv-update ] && git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
 ln -sf $DEST/default-gems ~/.rbenv/.
 
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
 # install-ackrc
 ln -sf $DEST/ackrc ~/.ackrc
 

@@ -37,8 +37,9 @@ MACHINE=`uname`
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:/usr/bin:/usr/local/sbin:$HOME/bin:/usr/local/share/npm/bin:$HOME/gocode/bin:/usr/local/opt/go/libexec/bin
-alias vi="vim"
+export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:$HOME/.cargo/bin:/usr/bin:/usr/local/sbin:$HOME/bin:/usr/local/share/npm/bin:$HOME/gocode/bin:/usr/local/opt/go/libexec/bin
+alias vi="nvim"
+alias vim="nvim"
 alias edit="vim"
 alias sync="/bin/sync;/bin/sync;/bin/sync"
 alias p="ping"
@@ -53,7 +54,7 @@ export ENABLE_STARTUP_LOCALE="en_US.UTF-8"
 export LANG="en_US.UTF-8"
 export LANGUAGE="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export EDITOR="vim"
+export EDITOR="nvim"
 export ACK_PAGER="less -r"
 export GOPATH="$HOME/gocode"
 
@@ -105,3 +106,6 @@ else
 fi
 export PATH="$HOME/.pyenv/shims:$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+

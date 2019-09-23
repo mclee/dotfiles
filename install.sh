@@ -93,3 +93,7 @@ if [ $MACHINE != "Darwin" ]; then
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash #nvm
 	git clone https://github.com/yyuu/pyenv.git ~/.pyenv #pyenv
 fi
+
+# nvim
+mkdir -p ~/.config/nvim
+ln -sf $DEST/init.vim ~/.config/nvim/init.vim

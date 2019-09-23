@@ -97,3 +97,6 @@ fi
 # nvim
 mkdir -p ~/.config/nvim
 ln -sf $DEST/init.vim ~/.config/nvim/init.vim
+
+# alacritty
+cp alacritty.yml ~/.config/alacritty/alacritty.yml

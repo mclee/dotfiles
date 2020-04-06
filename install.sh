@@ -33,9 +33,11 @@ if [ $MACHINE = "DARWIN" ]; then
 	ln -sf $DEST/.tmux.conf ~/.byobu/.tmux.conf
 fi
 
-# install tmux-powerline
-if [ ! -d ~/tmux-powerline ]; then
-	git clone git://github.com/erikw/tmux-powerline.git ~/tmux-powerline
+# install tmux configs
+if [ ! -d ~/.tmux ]; then
+	git clone https://github.com/gpakosz/.tmux.git ~/.tmux
+	ln -s ~/.tmux/.tmux.conf ~/.tmux.conf
+	ln -s $DEST/.tmux.conf.local ~/.
 fi
 
 # install-git

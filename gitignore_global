@@ -4,3 +4,4 @@
 .ropeproject
 supervisord.log
 supervisord.pid
+.ropeproject

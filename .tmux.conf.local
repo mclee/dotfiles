@@ -292,10 +292,20 @@ unbind C-b
 set -g prefix C-a
 bind C-a send-prefix
 bind a send-prefix
+
+# panes
 unbind -
 unbind |
 bind | split-window -v
 bind - split-window -h
 
+# base
+set -g base-index 0           # start windows numbering at 0
+
+# navigate windows
+unbind C-h
+unbind C-l
+bind -r p previous-window # select previous window
+bind -r n next-window     # select next window
 # move status line to top
 #set -g status-position top

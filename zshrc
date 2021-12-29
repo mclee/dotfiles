@@ -30,7 +30,7 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #plugins=(git brew bundler cap coffee osx rails4 redis-cli vundle)
-plugins=(git brew rails vundle)
+plugins=(git brew)
 
 MACHINE=`uname`
 
@@ -95,8 +95,8 @@ else
 	fi
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
 # pyenv stuff
 if [ $MACHINE = "Darwin" ]; then
@@ -104,7 +104,7 @@ if [ $MACHINE = "Darwin" ]; then
 else
 	export PYENV_ROOT="$HOME/.pyenv"
 fi
-export PATH="$HOME/.pyenv/shims:$PATH"
+export PATH="$PYENV_ROOT/shims:$PATH"
 if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

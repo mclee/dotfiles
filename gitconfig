@@ -26,3 +26,5 @@
 	trustExitCode = true
 [init]
 	templatedir = ~/dotfiles/.git_template
+[pull]
+	rebase = false

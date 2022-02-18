@@ -91,7 +91,7 @@ if [ $MACHINE = "Linux" ] && [ -f ~/.zshrc.linux ]; then
 	source ~/.zshrc.linux
 else
 	if ! env |grep -q ^TMUX=; then
-		ssh-add -A
+		ssh-add --apple-use-keychain
 	fi
 fi
 

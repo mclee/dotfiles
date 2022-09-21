@@ -1,0 +1,16 @@
+wget
+neovim
+rbenv
+rbenv-bundler
+rbenv-aliases
+rbenv-default-gems
+rbenv-ctags
+rbenv-communal-gems
+tmux
+mtr
+htop
+jq
+ripgrep
+the_silver_searcher
+stern
+watch

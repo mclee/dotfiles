@@ -1,0 +1,17 @@
+alacritty
+alfred
+chrome
+firefox
+postman
+tmpdisk
+gimp
+macdown
+mark-text
+sublime-text
+vlc
+visual-studio-code
+itsycal
+skype
+coconutbattery
+insomnia
+reggy

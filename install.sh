@@ -24,13 +24,13 @@ fi
 ln -sf $DEST/zlogin ~/.zlogin
 ln -sf $DEST/mclee.zsh-theme ~/.oh-my-zsh/themes/mclee.zsh-theme
 
-# install-byobu
+# install homebrew
 if [ $MACHINE = "DARWIN" ]; then
-	if [ ! -d ~/.byobu ]; then
-		mkdir ~/.byobu
-	fi
-	ln -sf $DEST/profile.tmux ~/.byobu/profile.tmux
-	ln -sf $DEST/.tmux.conf ~/.byobu/.tmux.conf
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+	eval "$(homebrew/bin/brew shellenv)"
+
+	cat $DEST/brew.txt | xargs brew install
+	cat $DEST/cask.txt | xargs brew install --cask
 fi
 
 # install tmux configs
@@ -67,16 +67,12 @@ if [ $MACHINE != "Darwin" ]; then
 	cd ~/tsar; make; sudo make install;
 	cd ~;
 
-	[ ! -d ~/.rbenv ] && git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+	[ ! -d ~/.rbenv ] && git clone git://github.com/rbenv/rbenv.git ~/.rbenv
+	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone git://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 	[ ! -d ~/.rbenv/plugins/rbenv-aliases ] && git clone git://github.com/tpope/rbenv-aliases.git ~/.rbenv/plugins/rbenv-aliases
-	[ ! -d ~/.rbenv/plugins/rbenv-default-gems ] && git clone https://github.com/sstephenson/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
-	[ ! -d ~/.rbenv/plugins/rbenv-gem-rehash ] && git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+	[ ! -d ~/.rbenv/plugins/rbenv-default-gems ] && git clone https://github.com/rbenv/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
+	[ ! -d ~/.rbenv/plugins/rbenv-gem-rehash ] && git clone https://github.com/rbenv/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
-[ ! -d ~/.rbenv/plugins/rbenv-communal-gems ] && git clone git://github.com/tpope/rbenv-communal-gems.git ~/.rbenv/plugins/rbenv-communal-gems
-[ ! -d ~/.rbenv/plugins/rbenv-sudo ] && git clone git://github.com/dcarley/rbenv-sudo.git ~/.rbenv/plugins/rbenv-sudo
-[ ! -d ~/.rbenv/plugins/rbenv-ctags ] && git clone git://github.com/tpope/rbenv-ctags.git ~/.rbenv/plugins/rbenv-ctags
-[ ! -d ~/.rbenv/plugins/rbenv-update ] && git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
 ln -sf $DEST/default-gems ~/.rbenv/.
 
 # install fzf

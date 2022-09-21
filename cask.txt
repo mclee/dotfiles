@@ -1,6 +1,6 @@
 alacritty
 alfred
-chrome
+google-chrome
 firefox
 postman
 tmpdisk

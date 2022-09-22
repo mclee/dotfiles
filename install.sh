@@ -73,6 +73,7 @@ if [ $MACHINE != "Darwin" ]; then
 	[ ! -d ~/.rbenv/plugins/rbenv-default-gems ] && git clone https://github.com/rbenv/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
 	[ ! -d ~/.rbenv/plugins/rbenv-gem-rehash ] && git clone https://github.com/rbenv/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
+rbenv init
 ln -sf $DEST/default-gems ~/.rbenv/.
 
 # install fzf

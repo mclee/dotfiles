@@ -37,7 +37,7 @@ MACHINE=`uname`
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/sbin:/bin:/usr/sbin:/usr/local/sbin:$HOME/.cargo/bin:/usr/bin:/usr/local/bin:$HOME/bin:/usr/local/share/npm/bin:$HOME/gocode/bin:/usr/local/opt/go/libexec/bin
+export PATH=/sbin:/bin:/usr/sbin:$HOME/.rbenv/shims:/usr/local/sbin:$HOME/.cargo/bin:/usr/bin:/usr/local/bin:$HOME/bin:/usr/local/share/npm/bin:$HOME/gocode/bin:/usr/local/opt/go/libexec/bin
 # homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 

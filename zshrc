@@ -37,7 +37,10 @@ MACHINE=`uname`
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/sbin:/bin:/usr/sbin:/usr/local/bin:$HOME/.cargo/bin:/usr/bin:/usr/local/sbin:$HOME/bin:/usr/local/share/npm/bin:$HOME/gocode/bin:/usr/local/opt/go/libexec/bin
+export PATH=/sbin:/bin:/usr/sbin:/usr/local/sbin:$HOME/.cargo/bin:/usr/bin:/usr/local/bin:$HOME/bin:/usr/local/share/npm/bin:$HOME/gocode/bin:/usr/local/opt/go/libexec/bin
+# homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 alias vi="nvim"
 alias vim="nvim"
 alias edit="vim"
@@ -58,20 +61,11 @@ export EDITOR="nvim"
 export ACK_PAGER="less -r"
 export GOPATH="$HOME/gocode"
 
-if [ $MACHINE = "Darwin" ]; then
-	# homebrew byobu, only for OSX
-	export BYOBU_PREFIX=$(brew --prefix)
-
-	# homebrew android-sdk
-	ANDROID_HOME=/usr/local/opt/android-sdk
-fi
-
 # A righteous umask
 umask 22
 
 # rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+eval "$(rbenv init - zsh)"
 
 # rbenvsudo
 function rbenvsudo(){

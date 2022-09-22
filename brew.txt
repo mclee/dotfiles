@@ -1,7 +1,6 @@
 wget
 neovim
 rbenv
-rbenv-bundler
 rbenv-aliases
 rbenv-default-gems
 rbenv-ctags

@@ -15,3 +15,6 @@ skype
 coconutbattery
 insomnia
 reggy
+iina
+google-drive
+zoom

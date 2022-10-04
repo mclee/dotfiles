@@ -11,6 +11,7 @@ google-drive
 iina
 insomnia
 itsycal
+logseq
 macdown
 mark-text
 postman

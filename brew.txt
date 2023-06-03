@@ -9,6 +9,7 @@ tmux
 mtr
 htop
 jq
+wader/tap/fq
 ripgrep
 the_silver_searcher
 stern

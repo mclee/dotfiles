@@ -8,6 +8,7 @@ firefox
 gimp
 google-chrome
 google-drive
+hex-fiend
 iina
 insomnia
 itsycal

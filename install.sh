@@ -63,9 +63,9 @@ if [ $MACHINE != "Darwin" ]; then
 		libmysqlclient-dev byobu libpcre++-dev libxml2-dev libxslt1-dev htop neovim
 
 	# install tsar
-	git clone https://github.com/alibaba/tsar.git ~/tsar
-	cd ~/tsar; make; sudo make install;
-	cd ~;
+	# git clone https://github.com/alibaba/tsar.git ~/tsar
+	# cd ~/tsar; make; sudo make install;
+	# cd ~;
 
 	[ ! -d ~/.rbenv ] && git clone git://github.com/rbenv/rbenv.git ~/.rbenv
 	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone git://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
@@ -99,4 +99,4 @@ ln -sf $DEST/init.vim ~/.config/nvim/init.vim
 
 # alacritty
 [ ! -d ~/.config/alacritty ] && mkdir -p ~/.config/alacritty
-cp alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -sf $DEST/alacritty.toml ~/.config/alacritty/alacritty.toml

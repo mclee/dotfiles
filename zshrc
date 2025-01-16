@@ -103,3 +103,4 @@ if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+# uname -r | grep -q rpi && source zshrc.retropie  # uncomment this to auto load retropie

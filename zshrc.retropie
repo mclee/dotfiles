@@ -1,0 +1,3 @@
+case $(tty) in /dev/tty[0-9]*)
+	echo "tty detected, this is console! Let's launch emulationstation..." && /bin/emulationstation ;;
+esac

@@ -67,9 +67,9 @@ if [ $MACHINE != "Darwin" ]; then
 	# cd ~/tsar; make; sudo make install;
 	# cd ~;
 
-	[ ! -d ~/.rbenv ] && git clone git://github.com/rbenv/rbenv.git ~/.rbenv
-	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone git://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
-	[ ! -d ~/.rbenv/plugins/rbenv-aliases ] && git clone git://github.com/tpope/rbenv-aliases.git ~/.rbenv/plugins/rbenv-aliases
+	[ ! -d ~/.rbenv ] && git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+	[ ! -d ~/.rbenv/plugins/ruby-build ] && git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
+	[ ! -d ~/.rbenv/plugins/rbenv-aliases ] && git clone https://github.com/tpope/rbenv-aliases.git ~/.rbenv/plugins/rbenv-aliases
 	[ ! -d ~/.rbenv/plugins/rbenv-default-gems ] && git clone https://github.com/rbenv/rbenv-default-gems.git ~/.rbenv/plugins/rbenv-default-gems
 	[ ! -d ~/.rbenv/plugins/rbenv-gem-rehash ] && git clone https://github.com/rbenv/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
 fi
